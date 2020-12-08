@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A013B51A25801BE900BDC361 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A013B51925801BE900BDC361 /* Card.swift */; };
 		A06DE500258018C500AAA35B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE4FF258018C500AAA35B /* AppDelegate.swift */; };
 		A06DE502258018C500AAA35B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE501258018C500AAA35B /* SceneDelegate.swift */; };
 		A06DE504258018C500AAA35B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE503258018C500AAA35B /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A013B51925801BE900BDC361 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		A06DE4FC258018C500AAA35B /* BlackjackGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackjackGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06DE4FF258018C500AAA35B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A06DE501258018C500AAA35B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				A06DE501258018C500AAA35B /* SceneDelegate.swift */,
 				A06DE503258018C500AAA35B /* ViewController.swift */,
 				A06DE505258018C500AAA35B /* Main.storyboard */,
+				A013B51925801BE900BDC361 /* Card.swift */,
 				A06DE50B258018C600AAA35B /* Assets.xcassets */,
 				A06DE50D258018C600AAA35B /* LaunchScreen.storyboard */,
 				A06DE510258018C600AAA35B /* Info.plist */,
@@ -264,6 +267,7 @@
 			files = (
 				A06DE504258018C500AAA35B /* ViewController.swift in Sources */,
 				A06DE500258018C500AAA35B /* AppDelegate.swift in Sources */,
+				A013B51A25801BE900BDC361 /* Card.swift in Sources */,
 				A06DE50A258018C500AAA35B /* BlackjackGame.xcdatamodeld in Sources */,
 				A06DE502258018C500AAA35B /* SceneDelegate.swift in Sources */,
 			);
