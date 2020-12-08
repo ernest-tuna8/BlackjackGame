@@ -17,6 +17,7 @@
 		A06DE50F258018C600AAA35B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A06DE50D258018C600AAA35B /* LaunchScreen.storyboard */; };
 		A06DE51A258018C600AAA35B /* BlackjackGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE519258018C600AAA35B /* BlackjackGameTests.swift */; };
 		A06DE525258018C600AAA35B /* BlackjackGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE524258018C600AAA35B /* BlackjackGameUITests.swift */; };
+		A06DE53725801CA100AAA35B /* Lose View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE53625801CA100AAA35B /* Lose View Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
