@@ -9,9 +9,11 @@
 import Foundation
 class Card {
 
-var cardValues = [String]()
+    var cardValues = [Int]()
 
-init() {}
+init() {
+    cardValues.append(Int.random(in: 0...12))
+    }
 
     func generateCard() -> Int {
         let number = Int.random(in: 0...12)

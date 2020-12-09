@@ -50,6 +50,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="DealerLabel" destination="HBU-Lo-APC" id="NKv-ot-Ljo"/>
+                        <outlet property="Playerlabel" destination="Aip-Dn-piA" id="eGM-TB-O2c"/>
                         <outlet property="hitButtonOutlet" destination="Ve6-3w-oKZ" id="g67-wI-PvS"/>
                         <outlet property="standButtonOutlet" destination="Yrh-e2-YuK" id="TH6-0d-fGc"/>
                     </connections>
