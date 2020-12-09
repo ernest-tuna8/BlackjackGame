@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var standButtonOutlet: UIButton!
     @IBOutlet weak var DealerLabel: UILabel!
     @IBOutlet weak var Playerlabel: UILabel!
-    var usercard1:Card
+    var usercard1: Card
     var usercard2:Card
     var dealercard1:Card
     var dealercard2:Card
@@ -32,7 +32,11 @@ class ViewController: UIViewController {
         let newCard = Card()
         let newNumber = newCard.generateCard()
         print(newNumber)
+        var totalCards = 0 + newNumber
         Playerlabel.text = (Playerlabel.text ?? "")  + "\(newNumber)"
+        if (totalCards > 21) {
+        print("You Lose!")
+        }
     }
     
 }
