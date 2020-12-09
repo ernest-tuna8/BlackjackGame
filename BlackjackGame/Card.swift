@@ -11,7 +11,7 @@ class Card {
 
     var cardValues = [Int]()
 
-init() {
+    init() {
     cardValues.append(Int.random(in: 0...12))
     }
 

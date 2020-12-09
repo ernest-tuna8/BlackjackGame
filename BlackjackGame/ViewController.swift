@@ -15,17 +15,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var standButtonOutlet: UIButton!
     @IBOutlet weak var DealerLabel: UILabel!
     @IBOutlet weak var Playerlabel: UILabel!
-    var usercard1:Card
-    var usercard2:Card
-    var dealercard1:Card
-    var dealercard2:Card
+    var usercards = [Int]()
+    var dealercards = [Int]()
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        DealerLabel.text = "The dealer has a \(dealercard1) and a card face down"
-        Playerlabel.text = "The play has a \(dealercard1) and a card "
+        DealerLabel.text = "The dealer has a \(usercards) and a card face down"
+        Playerlabel.text = "The play has a \(dealercards) and a card"
     }
 
     @IBAction func hitButtonFunction(_ sender: UIButton) {
