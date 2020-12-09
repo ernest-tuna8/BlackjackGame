@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         let newCard = Card()
         let newNumber = newCard.generateCard()
         print(newNumber)
+        Playerlabel.text = (Playerlabel.text ?? "")  + "\(newNumber)"
     }
     
 }
