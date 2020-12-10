@@ -36,11 +36,11 @@ class ViewController: UIViewController {
         let newCard = Card()
         let newNumber = newCard.generateCard()
         print(newNumber)
-        var totalCards = 0 + newNumber
-        Playerlabel.text = (Playerlabel.text ?? "")  + "\(newNumber)"
-        if (totalCards > 21) {
-        print("You Lose!")
-        }
+        //var totalCards = 0 + newNumber
+        Playerlabel.text = (Playerlabel.text ?? " ")  + "\(newNumber), "
+       // if (totalCards > 21) {
+      //  print("You Lose!")
+      //  }
     }
     @IBAction func Standbutton(_ sender: UIButton) {
         var playertotal = usercards.reduce(0,+)

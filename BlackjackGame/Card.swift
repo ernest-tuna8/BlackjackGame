@@ -15,8 +15,15 @@ class Card {
     cardValues.append(Int.random(in: 1...13))
     }
 
-    func generateCard() -> Int {
-        let number = Int.random(in: 1...13)
-        return number
+    func generateCard() -> String {
+        let cardNumber = Int.random(in: 1...13)
+        if (cardNumber < 2 || cardNumber > 10) {
+            if (cardNumber == 1) { return "Ace"}
+            if (cardNumber == 11) {return "Jack"}
+            if (cardNumber == 12) {return "Queen"}
+            if (cardNumber == 13) {return "King"}
+        }
+        return "\(cardNumber)"
     }
+    
 }
