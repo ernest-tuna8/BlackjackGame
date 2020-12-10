@@ -28,6 +28,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stand"/>
                                 <connections>
+                                    <action selector="Standbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJ7-BU-qWb"/>
                                     <segue destination="pIw-YK-Oa8" kind="show" id="EaF-bH-eyY"/>
                                 </connections>
                             </button>

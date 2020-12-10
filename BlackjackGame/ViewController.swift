@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        DealerLabel.text = "The dealer has a \(usercards) and a card face down"
-        Playerlabel.text = "The play has a \(dealercards) and a card"
+        DealerLabel.text = "The dealer has a \(dealercards) and a card face down"
+        Playerlabel.text = "The play has a \(usercards) and a card"
     }
 
     @IBAction func hitButtonFunction(_ sender: UIButton) {
@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         if (totalCards > 21) {
         print("You Lose!")
         }
+    }
+    @IBAction func Standbutton(_ sender: UIButton) {
     }
     
 }
