@@ -15,14 +15,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var standButtonOutlet: UIButton!
     @IBOutlet weak var DealerLabel: UILabel!
     @IBOutlet weak var Playerlabel: UILabel!
-    var usercards = [Int]()
-    var dealercards = [Int]()
+    var usercards = [Card]()
+    var dealercards = [Card]()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        count1 = 0
+        count2 = 0
+        while count1 <  {
+            <#code#>
+        }
         DealerLabel.text = "The dealer has a \(dealercards) and a card face down"
         Playerlabel.text = "The play has a \(usercards) and a card"
     }
@@ -38,6 +43,15 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func Standbutton(_ sender: UIButton) {
+        var playertotal = usercards.reduce(0,+)
+        
+        var dealertotal = dealercards.reduce(0,+)
+        while dealertotal < playertotal || dealertotal >= 21  {
+            dealercards
+        }
+        dealercards.append(<#T##Sequence#>)
+        
+        
     }
     
 }

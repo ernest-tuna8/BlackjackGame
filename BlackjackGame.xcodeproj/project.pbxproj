@@ -17,7 +17,7 @@
 		A06DE50F258018C600AAA35B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A06DE50D258018C600AAA35B /* LaunchScreen.storyboard */; };
 		A06DE51A258018C600AAA35B /* BlackjackGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE519258018C600AAA35B /* BlackjackGameTests.swift */; };
 		A06DE525258018C600AAA35B /* BlackjackGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE524258018C600AAA35B /* BlackjackGameUITests.swift */; };
-		A06DE53725801CA100AAA35B /* Lose View Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE53625801CA100AAA35B /* Lose View Controller.swift */; };
+		A06DE5392582BCBF00AAA35B /* Loose screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE5382582BCBF00AAA35B /* Loose screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +54,7 @@
 		A06DE520258018C600AAA35B /* BlackjackGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlackjackGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06DE524258018C600AAA35B /* BlackjackGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackjackGameUITests.swift; sourceTree = "<group>"; };
 		A06DE526258018C600AAA35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A06DE5382582BCBF00AAA35B /* Loose screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Loose screen.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 				A06DE501258018C500AAA35B /* SceneDelegate.swift */,
 				A06DE503258018C500AAA35B /* ViewController.swift */,
 				A06DE505258018C500AAA35B /* Main.storyboard */,
+				A06DE5382582BCBF00AAA35B /* Loose screen.swift */,
 				A013B51925801BE900BDC361 /* Card.swift */,
 				A06DE50B258018C600AAA35B /* Assets.xcassets */,
 				A06DE50D258018C600AAA35B /* LaunchScreen.storyboard */,
@@ -271,6 +273,7 @@
 				A013B51A25801BE900BDC361 /* Card.swift in Sources */,
 				A06DE50A258018C500AAA35B /* BlackjackGame.xcdatamodeld in Sources */,
 				A06DE502258018C500AAA35B /* SceneDelegate.swift in Sources */,
+				A06DE5392582BCBF00AAA35B /* Loose screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

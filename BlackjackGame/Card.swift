@@ -12,11 +12,11 @@ class Card {
     var cardValues = [Int]()
 
     init() {
-    cardValues.append(Int.random(in: 0...12))
+    cardValues.append(Int.random(in: 1...13))
     }
 
     func generateCard() -> Int {
-        let number = Int.random(in: 0...12)
+        let number = Int.random(in: 1...13)
         return number
     }
 }

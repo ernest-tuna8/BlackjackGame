@@ -29,7 +29,6 @@
                                 <state key="normal" title="Stand"/>
                                 <connections>
                                     <action selector="Standbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJ7-BU-qWb"/>
-                                    <segue destination="pIw-YK-Oa8" kind="show" id="EaF-bH-eyY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBU-Lo-APC">
@@ -55,16 +54,17 @@
                         <outlet property="Playerlabel" destination="Aip-Dn-piA" id="eGM-TB-O2c"/>
                         <outlet property="hitButtonOutlet" destination="Ve6-3w-oKZ" id="g67-wI-PvS"/>
                         <outlet property="standButtonOutlet" destination="Yrh-e2-YuK" id="TH6-0d-fGc"/>
+                        <segue destination="pIw-YK-Oa8" kind="show" identifier="Tothe win or loose screen." id="awF-Vg-K7w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-375.36231884057975" y="101.78571428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Loose screen-->
         <scene sceneID="pck-ek-DcX">
             <objects>
-                <viewController id="pIw-YK-Oa8" sceneMemberID="viewController">
+                <viewController id="pIw-YK-Oa8" customClass="Loose_screen" customModule="BlackjackGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u16-cM-d13">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgj-uH-2YP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="102"/>
+            <point key="canvasLocation" x="420" y="102"/>
         </scene>
     </scenes>
 </document>
