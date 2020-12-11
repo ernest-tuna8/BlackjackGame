@@ -15,8 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var standButtonOutlet: UIButton!
     @IBOutlet weak var DealerLabel: UILabel!
     @IBOutlet weak var Playerlabel: UILabel!
-    var usercards = [Card]()
-    var dealercards = [Card]()
+    var usercards = [Card,Int]()
+    var dealercards = [Card,Int]()
     var usertotal: Int = -1
     let dealertotal: Int = -1
     
@@ -54,11 +54,10 @@ class ViewController: UIViewController {
             playertotal = playertotal + dahcard
             usertotal = playertotal
         }
-        
         while dealertotal < usertotal  {
-            dealercards.append()
+            dealercards.append(generateCard())
         }
-        
+        performSegue(withIdentifier: "To the next screen", sender: self)
         
         
     }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A013B51A25801BE900BDC361 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A013B51925801BE900BDC361 /* Card.swift */; };
 		A06DE500258018C500AAA35B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE4FF258018C500AAA35B /* AppDelegate.swift */; };
 		A06DE502258018C500AAA35B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE501258018C500AAA35B /* SceneDelegate.swift */; };
 		A06DE504258018C500AAA35B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE503258018C500AAA35B /* ViewController.swift */; };
@@ -18,6 +17,7 @@
 		A06DE51A258018C600AAA35B /* BlackjackGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE519258018C600AAA35B /* BlackjackGameTests.swift */; };
 		A06DE525258018C600AAA35B /* BlackjackGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE524258018C600AAA35B /* BlackjackGameUITests.swift */; };
 		A06DE5392582BCBF00AAA35B /* Loose screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06DE5382582BCBF00AAA35B /* Loose screen.swift */; };
+		A06DE53B2583A8BC00AAA35B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A013B51925801BE900BDC361 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,8 +109,8 @@
 				A06DE501258018C500AAA35B /* SceneDelegate.swift */,
 				A06DE503258018C500AAA35B /* ViewController.swift */,
 				A06DE505258018C500AAA35B /* Main.storyboard */,
-				A06DE5382582BCBF00AAA35B /* Loose screen.swift */,
 				A013B51925801BE900BDC361 /* Card.swift */,
+				A06DE5382582BCBF00AAA35B /* Loose screen.swift */,
 				A06DE50B258018C600AAA35B /* Assets.xcassets */,
 				A06DE50D258018C600AAA35B /* LaunchScreen.storyboard */,
 				A06DE510258018C600AAA35B /* Info.plist */,
@@ -269,8 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A06DE504258018C500AAA35B /* ViewController.swift in Sources */,
+				A06DE53B2583A8BC00AAA35B /* Card.swift in Sources */,
 				A06DE500258018C500AAA35B /* AppDelegate.swift in Sources */,
-				A013B51A25801BE900BDC361 /* Card.swift in Sources */,
 				A06DE50A258018C500AAA35B /* BlackjackGame.xcdatamodeld in Sources */,
 				A06DE502258018C500AAA35B /* SceneDelegate.swift in Sources */,
 				A06DE5392582BCBF00AAA35B /* Loose screen.swift in Sources */,

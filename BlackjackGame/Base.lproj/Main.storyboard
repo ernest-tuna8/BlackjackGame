@@ -54,7 +54,7 @@
                         <outlet property="Playerlabel" destination="Aip-Dn-piA" id="eGM-TB-O2c"/>
                         <outlet property="hitButtonOutlet" destination="Ve6-3w-oKZ" id="g67-wI-PvS"/>
                         <outlet property="standButtonOutlet" destination="Yrh-e2-YuK" id="TH6-0d-fGc"/>
-                        <segue destination="pIw-YK-Oa8" kind="show" identifier="Tothe win or loose screen." id="awF-Vg-K7w"/>
+                        <segue destination="pIw-YK-Oa8" kind="show" identifier="To the next screen." id="awF-Vg-K7w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

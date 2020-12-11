@@ -9,7 +9,7 @@
 import Foundation
 class Card {
 
-    var cardValues = [Int : String]()
+    var cardValues = [String : Int]()
     var intValues = [1,2,3,4,5,6,7,8,9,10,10,10,10]
     var stringValues = ["Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"]
     
@@ -19,8 +19,10 @@ class Card {
     }
 
     init() {
-    cardValues.append(Int.random(in: 1...13))
-    }
+    let random = (Int.random(in: 1...13))
+        
+        }
+    
 
     func generateCard() -> String {
         let cardNumber = Int.random(in: 1...13)
