@@ -9,7 +9,14 @@
 import Foundation
 class Card {
 
-    var cardValues = [Int]()
+    var cardValues = [Int : String]()
+    var intValues = [1,2,3,4,5,6,7,8,9,10,10,10,10]
+    var stringValues = ["Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"]
+    
+    for index in 1...13 {
+    let daCard = cardValues(cardInts: intValues[index], cardStrings: stringValues[index])
+    cardValues.append(daCard)
+    }
 
     init() {
     cardValues.append(Int.random(in: 1...13))
