@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var Playerlabel: UILabel!
     var usercards = [Card,Int]()
     var dealercards = [Card,Int]()
-    var usertotal: Int = -1
-    let dealertotal: Int = -1
+    var usertotal: Int = 0
+    var dealertotal: Int = 0
     
     
     override func viewDidLoad() {
@@ -61,6 +61,10 @@ class ViewController: UIViewController {
         
         
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nvc = segue.destination as! Loose_screen
+        nvc.dtotal = dealertotal
+        nvc.ustotal = usertotal
+    }
 }
 

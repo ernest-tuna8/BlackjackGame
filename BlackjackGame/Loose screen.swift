@@ -9,6 +9,10 @@
 import UIKit
 
 class Loose_screen: UIViewController {
+    var dtotal: Int!
+    var ustotal: Int!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

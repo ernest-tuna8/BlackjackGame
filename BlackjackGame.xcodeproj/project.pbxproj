@@ -109,11 +109,11 @@
 				A06DE501258018C500AAA35B /* SceneDelegate.swift */,
 				A06DE503258018C500AAA35B /* ViewController.swift */,
 				A06DE505258018C500AAA35B /* Main.storyboard */,
-				A013B51925801BE900BDC361 /* Card.swift */,
 				A06DE5382582BCBF00AAA35B /* Loose screen.swift */,
+				A013B51925801BE900BDC361 /* Card.swift */,
 				A06DE50B258018C600AAA35B /* Assets.xcassets */,
-				A06DE50D258018C600AAA35B /* LaunchScreen.storyboard */,
 				A06DE510258018C600AAA35B /* Info.plist */,
+				A06DE50D258018C600AAA35B /* LaunchScreen.storyboard */,
 				A06DE508258018C500AAA35B /* BlackjackGame.xcdatamodeld */,
 			);
 			path = BlackjackGame;
