@@ -15,56 +15,101 @@ class ViewController: UIViewController {
     @IBOutlet weak var standButtonOutlet: UIButton!
     @IBOutlet weak var DealerLabel: UILabel!
     @IBOutlet weak var Playerlabel: UILabel!
-    var usercards = [Card,Int]()
-    var dealercards = [Card,Int]()
-    var usertotal: Int = 0
-    var dealertotal: Int = 0
+    var deck = [Card]()
+    @IBOutlet weak var userTotalLabelOutlet: UILabel!
     
+    var userTotal: Int = 0
+    var dealerTotal: Int = 0
     
+    //create an array of cards in viewdidload
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        var count1 = 0
-        var count2 = 0
-        while count1 < 2 {
-            usercards.append(Card())
-            count1 = count1 + 1
+        
+        for index in 1...13 {
+            deck.append(Card(val: index, sui: "Hearts"))
         }
-        while count2 < 2{
-            usercards.append(Card())
-            count2 = count2 + 1
+        for index in 1...13 {
+            deck.append(Card(val: index, sui: "Spades"))
         }
-        DealerLabel.text = "The dealer has a \(dealercards) and a card face down"
-        Playerlabel.text = "The play has \(usercards)"
-    }
-
+        for index in 1...13 {
+            deck.append(Card(val: index, sui: "Clubs"))
+        }
+        for index in 1...13 {
+            deck.append(Card(val: index, sui: "Diamonds"))
+        }
+       // deck.append(Card(val: 2, sui: "Hearts"))
+       // deck.append(Card(val: 3, sui: "Hearts"))
+      
+        }
+  
+//takes one card out of array and uses it
     @IBAction func hitButtonFunction(_ sender: UIButton) {
-        let newCard = Card()
-        let newNumber = newCard.generateCard()
-        print(newNumber)
-        //var totalCards = 0 + newNumber
-        Playerlabel.text = (Playerlabel.text ?? " ")  + "\(newNumber), "
-       // if (totalCards > 21) {
-      //  print("You Lose!")
-      //  }
+        let userCard : Card!
+        userCard = deck.randomElement()
+        if (userCard.value == 1) {
+            Playerlabel.text = (Playerlabel.text ?? "") + " Ace of \(userCard.suit),"
+            //print("Ace of \(userCard.suit)")
+            userTotal = userTotal + userCard.value //we will change this later (NOT IMPORTANT)
+            userTotalLabelOutlet.text = "User Total: \(userTotal)"
+            print(userTotal)
+        }
+        else if (userCard.value == 11) {
+            Playerlabel.text = (Playerlabel.text ?? "") + " Jack of \(userCard.suit),"
+            //print("Jack of \(userCard.suit)")
+            userTotal = userTotal + 10
+            userTotalLabelOutlet.text = "User Total: \(userTotal)"
+            print(userTotal)
+        }
+        else if (userCard.value == 12) {
+            Playerlabel.text = (Playerlabel.text ?? "") + " Queen of \(userCard.suit),"
+            //print("Queen of \(userCard.suit)")
+            userTotal = userTotal + 10
+            userTotalLabelOutlet.text = "User Total: \(userTotal)"
+            print(userTotal)
+        }
+        else if (userCard.value == 13) {
+            Playerlabel.text = (Playerlabel.text ?? "") + " King of \(userCard.suit),"
+            //print("King of \(userCard.suit)")
+            userTotal = userTotal + 10
+            userTotalLabelOutlet.text = "User Total: \(userTotal)"
+            print(userTotal)
+        } else {
+            Playerlabel.text = (Playerlabel.text ?? "") + " \(userCard.getCard()),"
+            //print(userCard.getCard())
+            userTotal = userTotal + userCard.value
+            userTotalLabelOutlet.text = "User Total: \(userTotal)"
+            print(userTotal)
+        }
+        
+//        for element in 0...51 {
+//            if (deck[element].value == 1) {
+//                print("Ace of \(deck[element].suit)")
+//            }
+//           else if (deck[element].value == 11) {
+//                print("Jack of \(deck[element].suit)")
+//            }
+//           else if (deck[element].value == 12) {
+//                print("Queen of \(deck[element].suit)")
+//            }
+//           else if (deck[element].value == 13) {
+//                print("King of \(deck[element].suit)")
+//            } else {
+//        print(deck[element].getCard())
+//            }
+//        }
+        
     }
     @IBAction func Standbutton(_ sender: UIButton) {
-        var playertotal = 0
-        for dahcard in usercards {
-            playertotal = playertotal + dahcard
-            usertotal = playertotal
-        }
-        while dealertotal < usertotal  {
-            dealercards.append(generateCard())
-        }
+  
         performSegue(withIdentifier: "To the next screen", sender: self)
         
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nvc = segue.destination as! Loose_screen
-        nvc.dtotal = dealertotal
-        nvc.ustotal = usertotal
+        nvc.dtotal = dealerTotal
+        nvc.ustotal = userTotal
     }
+
 }
 

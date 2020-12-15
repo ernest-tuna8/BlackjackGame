@@ -8,31 +8,18 @@
 
 import Foundation
 class Card {
-
-    var cardValues = [String : Int]()
-    var intValues = [1,2,3,4,5,6,7,8,9,10,10,10,10]
-    var stringValues = ["Ace","2","3","4","5","6","7","8","9","10","Jack","Queen","King"]
+    var value : Int
+    var suit : String
     
-    for index in 1...13 {
-    let daCard = cardValues(cardInts: intValues[index], cardStrings: stringValues[index])
-    cardValues.append(daCard)
+    //
+    //one single card string as value and suit
+    //init should build the card with two values (give me a 2 and heart)
+    init(val : Int, sui : String) {
+        value = val
+        suit = sui
+        }
+    func getCard() -> String {
+        return "\(value) of \(suit)" //make if statement for value if less than 2 or greater than 10
     }
 
-    init() {
-    let random = (Int.random(in: 1...13))
-        
-        }
-    
-
-    func generateCard() -> String {
-        let cardNumber = Int.random(in: 1...13)
-        if (cardNumber < 2 || cardNumber > 10) {
-            if (cardNumber == 1) { return "Ace"}
-            if (cardNumber == 11) {return "Jack"}
-            if (cardNumber == 12) {return "Queen"}
-            if (cardNumber == 13) {return "King"}
-        }
-        return "\(cardNumber)"
-    }
-    
 }

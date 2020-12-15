@@ -45,6 +45,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Total: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UJr-GQ-CHu">
+                                <rect key="frame" x="20" y="90" width="374" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -54,6 +61,7 @@
                         <outlet property="Playerlabel" destination="Aip-Dn-piA" id="eGM-TB-O2c"/>
                         <outlet property="hitButtonOutlet" destination="Ve6-3w-oKZ" id="g67-wI-PvS"/>
                         <outlet property="standButtonOutlet" destination="Yrh-e2-YuK" id="TH6-0d-fGc"/>
+                        <outlet property="userTotalLabelOutlet" destination="UJr-GQ-CHu" id="wUi-Yo-2og"/>
                         <segue destination="pIw-YK-Oa8" kind="show" identifier="To the next screen." id="awF-Vg-K7w"/>
                     </connections>
                 </viewController>
