@@ -13,10 +13,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var hitButtonOutlet: UIButton!
     
     @IBOutlet weak var standButtonOutlet: UIButton!
-    @IBOutlet weak var DealerLabel: UILabel!
     @IBOutlet weak var Playerlabel: UILabel!
     var deck = [Card]()
     @IBOutlet weak var userTotalLabelOutlet: UILabel!
+    @IBOutlet weak var pulledAceLabelOutlet: UILabel!
+    @IBOutlet weak var aceOneButton: UIButton!
+    @IBOutlet weak var aceElevenButton: UIButton!
+    
+    
     
     var userTotal: Int = 0
     var dealerTotal: Int = 0
@@ -24,6 +28,9 @@ class ViewController: UIViewController {
     //create an array of cards in viewdidload
     override func viewDidLoad() {
         super.viewDidLoad()
+        pulledAceLabelOutlet.isHidden = true
+        aceOneButton.isHidden = true
+        aceElevenButton.isHidden = true
         
         for index in 1...13 {
             deck.append(Card(val: index, sui: "Hearts"))
@@ -47,6 +54,9 @@ class ViewController: UIViewController {
         let userCard : Card!
         userCard = deck.randomElement()
         if (userCard.value == 1) {
+            pulledAceLabelOutlet.isHidden = false
+            aceOneButton.isHidden = false
+            aceElevenButton.isHidden = false
             Playerlabel.text = (Playerlabel.text ?? "") + " Ace of \(userCard.suit),"
             //print("Ace of \(userCard.suit)")
             userTotal = userTotal + userCard.value //we will change this later (NOT IMPORTANT)

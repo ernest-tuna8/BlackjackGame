@@ -31,13 +31,6 @@
                                     <action selector="Standbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJ7-BU-qWb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBU-Lo-APC">
-                                <rect key="frame" x="186" y="634" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's Cards:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aip-Dn-piA">
                                 <rect key="frame" x="20" y="109" width="374" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,14 +45,36 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have just pulled an Ace! Would you like for it to be a 1 or 11?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ciw-0C-haH">
+                                <rect key="frame" x="20" y="416" width="374" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhK-qk-6ln">
+                                <rect key="frame" x="112" y="523" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="One"/>
+                                <connections>
+                                    <action selector="hitButtonFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qP4-2C-C38"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hEY-v4-zZE">
+                                <rect key="frame" x="237" y="523" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Eleven"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="DealerLabel" destination="HBU-Lo-APC" id="NKv-ot-Ljo"/>
                         <outlet property="Playerlabel" destination="Aip-Dn-piA" id="eGM-TB-O2c"/>
+                        <outlet property="aceElevenButton" destination="hEY-v4-zZE" id="TrQ-kt-ByL"/>
+                        <outlet property="aceOneButton" destination="WhK-qk-6ln" id="STN-nZ-kta"/>
                         <outlet property="hitButtonOutlet" destination="Ve6-3w-oKZ" id="g67-wI-PvS"/>
+                        <outlet property="pulledAceLabelOutlet" destination="Ciw-0C-haH" id="fL6-ds-tPK"/>
                         <outlet property="standButtonOutlet" destination="Yrh-e2-YuK" id="TH6-0d-fGc"/>
                         <outlet property="userTotalLabelOutlet" destination="UJr-GQ-CHu" id="wUi-Yo-2og"/>
                         <segue destination="pIw-YK-Oa8" kind="show" identifier="To the next screen." id="awF-Vg-K7w"/>
