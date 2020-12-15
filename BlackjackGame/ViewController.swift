@@ -110,14 +110,12 @@ class ViewController: UIViewController {
         
     }
     @IBAction func Standbutton(_ sender: UIButton) {
-  
-        performSegue(withIdentifier: "To the next screen", sender: self)
+        performSegue(withIdentifier: "Toscreen2", sender: self)
         
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nvc = segue.destination as! Loose_screen
-        nvc.dtotal = dealerTotal
         nvc.ustotal = userTotal
     }
 
