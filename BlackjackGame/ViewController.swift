@@ -60,7 +60,7 @@ class ViewController: UIViewController {
             Playerlabel.text = (Playerlabel.text ?? "") + " Ace of \(userCard.suit),"
             //print("Ace of \(userCard.suit)")
             //userTotal = userTotal + userCard.value //we will change this later (NOT IMPORTANT)
-            userTotalLabelOutlet.text = "User Total: \(userTotal)"
+           // userTotalLabelOutlet.text = "User Total: \(userTotal)"
            // print(userTotal)
         }
         else if (userCard.value == 11) {
@@ -110,10 +110,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func aceOneButtonFunction(_ sender: UIButton) {
-    
+    userTotal = userTotal + 1
+    pulledAceLabelOutlet.isHidden = true
+    aceOneButton.isHidden = true
+    aceElevenButton.isHidden = true
+    userTotalLabelOutlet.text = "User Total: \(userTotal)"
     }
     
     @IBAction func aceElevenButtonFunction(_ sender: UIButton) {
+    userTotal = userTotal + 11
+    pulledAceLabelOutlet.isHidden = true
+    aceOneButton.isHidden = true
+    aceElevenButton.isHidden = true
+    userTotalLabelOutlet.text = "User Total: \(userTotal)"
     }
     
     
