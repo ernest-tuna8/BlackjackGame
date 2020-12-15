@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var hitButtonOutlet: UIButton!
     
     @IBOutlet weak var standButtonOutlet: UIButton!
-    @IBOutlet weak var DealerLabel: UILabel!
     @IBOutlet weak var Playerlabel: UILabel!
     var deck = [Card]()
     @IBOutlet weak var userTotalLabelOutlet: UILabel!
@@ -100,14 +99,12 @@ class ViewController: UIViewController {
         
     }
     @IBAction func Standbutton(_ sender: UIButton) {
-  
-        performSegue(withIdentifier: "To the next screen", sender: self)
+        performSegue(withIdentifier: "Toscreen2", sender: self)
         
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let nvc = segue.destination as! Loose_screen
-        nvc.dtotal = dealerTotal
         nvc.ustotal = userTotal
     }
 
