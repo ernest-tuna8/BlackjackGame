@@ -12,6 +12,7 @@ class Loose_screen: UIViewController {
     var ustotal: Int!
     var dealerTotal: Int = 0
     var deck2 = [Card]()
+    var marker = false
 
     @IBOutlet weak var WinorLose: UILabel!
     override func viewDidLoad() {
@@ -32,13 +33,17 @@ class Loose_screen: UIViewController {
              let dealerCard : Card!
                    dealerCard = deck2.randomElement()
                    if (dealerCard.value == 1) {
-                       //print("Ace of \(userCard.suit)")
-                       dealerTotal = dealerTotal + dealerCard.value //we will change this later (NOT IMPORTANT)
+                    if dealerTotal + 11 < 21 {
+                        dealerTotal = dealerTotal + 11
+                        marker = true
+                    }
+                    else {
+                       dealerTotal = dealerTotal + dealerCard.value
+                    }
                                           }
                    else if (dealerCard.value == 11) {
                        //print("Jack of \(userCard.suit)")
                        dealerTotal = dealerTotal + 10
-                       
                    }
                    else if (dealerCard.value == 12) {
                        
@@ -56,6 +61,11 @@ class Loose_screen: UIViewController {
                        //print(userCard.getCard())
                        dealerTotal = dealerTotal + dealerCard.value
                    }
+            if dealerTotal > 21 && marker == true{
+                dealerTotal = dealerTotal - 11
+                dealerTotal = dealerTotal + 1
+                marker = false
+            }
         }
         if dealerTotal > 21 {
             WinorLose.text = "you win since the dealer bust, they went over 21 with a total of \(dealerTotal) while you got \(ustotal)"
