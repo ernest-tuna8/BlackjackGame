@@ -57,6 +57,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="One"/>
                                 <connections>
+                                    <action selector="aceOneButtonFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T7l-Dr-K0H"/>
                                     <action selector="hitButtonFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qP4-2C-C38"/>
                                 </connections>
                             </button>
@@ -64,6 +65,9 @@
                                 <rect key="frame" x="237" y="523" width="76" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Eleven"/>
+                                <connections>
+                                    <action selector="aceElevenButtonFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AB8-98-ar5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

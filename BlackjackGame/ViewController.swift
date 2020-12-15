@@ -59,38 +59,37 @@ class ViewController: UIViewController {
             aceElevenButton.isHidden = false
             Playerlabel.text = (Playerlabel.text ?? "") + " Ace of \(userCard.suit),"
             //print("Ace of \(userCard.suit)")
-            userTotal = userTotal + userCard.value //we will change this later (NOT IMPORTANT)
+            //userTotal = userTotal + userCard.value //we will change this later (NOT IMPORTANT)
             userTotalLabelOutlet.text = "User Total: \(userTotal)"
-            print(userTotal)
+           // print(userTotal)
         }
         else if (userCard.value == 11) {
             Playerlabel.text = (Playerlabel.text ?? "") + " Jack of \(userCard.suit),"
             //print("Jack of \(userCard.suit)")
             userTotal = userTotal + 10
             userTotalLabelOutlet.text = "User Total: \(userTotal)"
-            print(userTotal)
+         //   print(userTotal)
         }
         else if (userCard.value == 12) {
             Playerlabel.text = (Playerlabel.text ?? "") + " Queen of \(userCard.suit),"
             //print("Queen of \(userCard.suit)")
             userTotal = userTotal + 10
             userTotalLabelOutlet.text = "User Total: \(userTotal)"
-            print(userTotal)
+          //  print(userTotal)
         }
         else if (userCard.value == 13) {
             Playerlabel.text = (Playerlabel.text ?? "") + " King of \(userCard.suit),"
             //print("King of \(userCard.suit)")
             userTotal = userTotal + 10
             userTotalLabelOutlet.text = "User Total: \(userTotal)"
-            print(userTotal)
+         //   print(userTotal)
         } else {
             Playerlabel.text = (Playerlabel.text ?? "") + " \(userCard.getCard()),"
             //print(userCard.getCard())
             userTotal = userTotal + userCard.value
             userTotalLabelOutlet.text = "User Total: \(userTotal)"
-            print(userTotal)
+          //  print(userTotal)
         }
-        
 //        for element in 0...51 {
 //            if (deck[element].value == 1) {
 //                print("Ace of \(deck[element].suit)")
@@ -109,6 +108,17 @@ class ViewController: UIViewController {
 //        }
         
     }
+    
+    @IBAction func aceOneButtonFunction(_ sender: UIButton) {
+    
+    }
+    
+    @IBAction func aceElevenButtonFunction(_ sender: UIButton) {
+    }
+    
+    
+    
+    
     @IBAction func Standbutton(_ sender: UIButton) {
         performSegue(withIdentifier: "Toscreen2", sender: self)
         
