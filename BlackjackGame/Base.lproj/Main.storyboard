@@ -108,6 +108,9 @@
                         <viewLayoutGuide key="safeArea" id="d2m-lK-A17"/>
                     </view>
                     <navigationItem key="navigationItem" id="syr-Aq-FBJ"/>
+                    <connections>
+                        <outlet property="WinorLose" destination="7bF-TZ-B80" id="hXf-06-hFm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kgj-uH-2YP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
