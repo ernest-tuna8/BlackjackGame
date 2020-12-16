@@ -154,6 +154,6 @@ class ViewController: UIViewController {
         let nvc = segue.destination as! Loose_screen
         nvc.ustotal = userTotal
     }
-
+    @IBAction func unwind(_ seg:UIStoryboardSegue)
 }
 
