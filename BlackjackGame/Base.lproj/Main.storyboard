@@ -31,8 +31,8 @@
                                     <action selector="Standbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BJ7-BU-qWb"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's Cards:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aip-Dn-piA">
-                                <rect key="frame" x="20" y="109" width="374" height="69"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User's Cards:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aip-Dn-piA">
+                                <rect key="frame" x="20" y="109" width="374" height="129"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -58,7 +58,6 @@
                                 <state key="normal" title="One"/>
                                 <connections>
                                     <action selector="aceOneButtonFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T7l-Dr-K0H"/>
-                                    <action selector="hitButtonFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qP4-2C-C38"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hEY-v4-zZE">
@@ -67,6 +66,17 @@
                                 <state key="normal" title="Eleven"/>
                                 <connections>
                                     <action selector="aceElevenButtonFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AB8-98-ar5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmO-KB-Lcv">
+                                <rect key="frame" x="54" y="378" width="307" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="YOU BUST! Click me to play another game">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="youBustButtonFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aqX-Ck-wK4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,6 +91,7 @@
                         <outlet property="pulledAceLabelOutlet" destination="Ciw-0C-haH" id="fL6-ds-tPK"/>
                         <outlet property="standButtonOutlet" destination="Yrh-e2-YuK" id="TH6-0d-fGc"/>
                         <outlet property="userTotalLabelOutlet" destination="UJr-GQ-CHu" id="wUi-Yo-2og"/>
+                        <outlet property="youBustButtonOutlet" destination="kmO-KB-Lcv" id="XOT-D3-vY1"/>
                         <segue destination="pIw-YK-Oa8" kind="show" identifier="Toscreen2" id="awF-Vg-K7w"/>
                     </connections>
                 </viewController>

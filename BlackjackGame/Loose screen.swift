@@ -68,10 +68,10 @@ class Loose_screen: UIViewController {
             }
         }
         if dealerTotal > 21 {
-            WinorLose.text = "you win since the dealer bust, they went over 21 with a total of \(dealerTotal) while you got \(ustotal)"
+            WinorLose.text = "you win since the dealer bust, they went over 21 with a total of \(dealerTotal) while you got \(ustotal!)"
         }
         else if dealerTotal > ustotal {
-            WinorLose.text = "You lose, the dealer got closer to 21 than you since they got \(dealerTotal) while you got \(ustotal)"
+            WinorLose.text = "You lose, the dealer got closer to 21 than you since they got \(dealerTotal) while you got \(ustotal!)"
         }
 
         // Do any additional setup after loading the view.

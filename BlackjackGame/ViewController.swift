@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var pulledAceLabelOutlet: UILabel!
     @IBOutlet weak var aceOneButton: UIButton!
     @IBOutlet weak var aceElevenButton: UIButton!
+    @IBOutlet weak var youBustButtonOutlet: UIButton!
+    
     
     
     
@@ -28,6 +30,7 @@ class ViewController: UIViewController {
     //create an array of cards in viewdidload
     override func viewDidLoad() {
         super.viewDidLoad()
+        youBustButtonOutlet.isHidden = true
         pulledAceLabelOutlet.isHidden = true
         aceOneButton.isHidden = true
         aceElevenButton.isHidden = true
@@ -44,70 +47,62 @@ class ViewController: UIViewController {
         for index in 1...13 {
             deck.append(Card(val: index, sui: "Diamonds"))
         }
-       // deck.append(Card(val: 2, sui: "Hearts"))
-       // deck.append(Card(val: 3, sui: "Hearts"))
-      
-        }
+       
+    }
   
 //takes one card out of array and uses it
     @IBAction func hitButtonFunction(_ sender: UIButton) {
         let userCard : Card!
         userCard = deck.randomElement()
         if (userCard.value == 1) {
+            hitButtonOutlet.isEnabled = false
             pulledAceLabelOutlet.isHidden = false
             aceOneButton.isHidden = false
             aceElevenButton.isHidden = false
             Playerlabel.text = (Playerlabel.text ?? "") + " Ace of \(userCard.suit),"
-            //print("Ace of \(userCard.suit)")
-            //userTotal = userTotal + userCard.value //we will change this later (NOT IMPORTANT)
-           // userTotalLabelOutlet.text = "User Total: \(userTotal)"
-           // print(userTotal)
         }
         else if (userCard.value == 11) {
             Playerlabel.text = (Playerlabel.text ?? "") + " Jack of \(userCard.suit),"
-            //print("Jack of \(userCard.suit)")
             userTotal = userTotal + 10
             userTotalLabelOutlet.text = "User Total: \(userTotal)"
-         //   print(userTotal)
+                if (userTotal > 21) {
+                    hitButtonOutlet.isEnabled = false
+                    standButtonOutlet.isEnabled = false
+                    youBustButtonOutlet.isHidden = false
+                }
         }
         else if (userCard.value == 12) {
             Playerlabel.text = (Playerlabel.text ?? "") + " Queen of \(userCard.suit),"
-            //print("Queen of \(userCard.suit)")
             userTotal = userTotal + 10
             userTotalLabelOutlet.text = "User Total: \(userTotal)"
-          //  print(userTotal)
+            if (userTotal > 21) {
+                hitButtonOutlet.isEnabled = false
+                standButtonOutlet.isEnabled = false
+                youBustButtonOutlet.isHidden = false
+            }
         }
         else if (userCard.value == 13) {
             Playerlabel.text = (Playerlabel.text ?? "") + " King of \(userCard.suit),"
-            //print("King of \(userCard.suit)")
             userTotal = userTotal + 10
             userTotalLabelOutlet.text = "User Total: \(userTotal)"
-         //   print(userTotal)
+            if (userTotal > 21) {
+                hitButtonOutlet.isEnabled = false
+                standButtonOutlet.isEnabled = false
+                youBustButtonOutlet.isHidden = false
+            }
         } else {
             Playerlabel.text = (Playerlabel.text ?? "") + " \(userCard.getCard()),"
-            //print(userCard.getCard())
             userTotal = userTotal + userCard.value
             userTotalLabelOutlet.text = "User Total: \(userTotal)"
-          //  print(userTotal)
+            if (userTotal > 21) {
+                hitButtonOutlet.isEnabled = false
+                standButtonOutlet.isEnabled = false
+                youBustButtonOutlet.isHidden = false
+            }
         }
-//        for element in 0...51 {
-//            if (deck[element].value == 1) {
-//                print("Ace of \(deck[element].suit)")
-//            }
-//           else if (deck[element].value == 11) {
-//                print("Jack of \(deck[element].suit)")
-//            }
-//           else if (deck[element].value == 12) {
-//                print("Queen of \(deck[element].suit)")
-//            }
-//           else if (deck[element].value == 13) {
-//                print("King of \(deck[element].suit)")
-//            } else {
-//        print(deck[element].getCard())
-//            }
-//        }
+       }
         
-    }
+    
     
     @IBAction func aceOneButtonFunction(_ sender: UIButton) {
     userTotal = userTotal + 1
@@ -115,6 +110,12 @@ class ViewController: UIViewController {
     aceOneButton.isHidden = true
     aceElevenButton.isHidden = true
     userTotalLabelOutlet.text = "User Total: \(userTotal)"
+    hitButtonOutlet.isEnabled = true
+        if (userTotal > 21) {
+            hitButtonOutlet.isEnabled = false
+            standButtonOutlet.isEnabled = false
+            youBustButtonOutlet.isHidden = false
+        }
     }
     
     @IBAction func aceElevenButtonFunction(_ sender: UIButton) {
@@ -123,9 +124,25 @@ class ViewController: UIViewController {
     aceOneButton.isHidden = true
     aceElevenButton.isHidden = true
     userTotalLabelOutlet.text = "User Total: \(userTotal)"
+    hitButtonOutlet.isEnabled = true
+        if (userTotal > 21) {
+            hitButtonOutlet.isEnabled = false
+            standButtonOutlet.isEnabled = false
+            youBustButtonOutlet.isHidden = false
+        }
     }
     
     
+    @IBAction func youBustButtonFunction(_ sender: UIButton) {
+    hitButtonOutlet.isEnabled = true
+    standButtonOutlet.isEnabled = true
+    youBustButtonOutlet.isHidden = true
+    userTotal = 0
+    dealerTotal = 0
+    userTotalLabelOutlet.text = "User Total: "
+    Playerlabel.text = "User's Cards: "
+    
+    }
     
     
     @IBAction func Standbutton(_ sender: UIButton) {
